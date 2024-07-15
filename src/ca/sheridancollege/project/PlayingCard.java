@@ -12,7 +12,10 @@ public class PlayingCard extends Card {
     private Suit suit;
     private CardNames cardName;
 
-    public PlayingCard(Suit suit, CardNames cardName){};
+    public PlayingCard(Suit suit, CardNames cardName){
+        this.suit=suit;
+        this.cardName=cardName;
+    };
 
   /**
      * Provides a string representation of the playing card.
@@ -21,5 +24,9 @@ public class PlayingCard extends Card {
     @Override
     public String toString() {
         return cardName + " of " + suit;
+    }
+    
+    public int getValue() {
+        return cardName.getValue();
     }
 }
